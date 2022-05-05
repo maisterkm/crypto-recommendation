@@ -2,6 +2,7 @@ package com.testtask.cryptorecommendation.controller;
 
 import com.testtask.cryptorecommendation.model.CryptoAsset;
 import com.testtask.cryptorecommendation.service.PriceService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ public class PriceController {
     private PriceService priceService;
 
     @GetMapping("/{symbol}/oldest")
+    @ApiOperation("#########################################")
     public CryptoAsset getOldestPrice(@PathVariable String symbol) {
         return priceService.getOldestPrice(symbol);
     }
