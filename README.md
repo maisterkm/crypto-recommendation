@@ -5,7 +5,7 @@ In the CRYPTO_NAME_values.csv (e.g. BTC_values.csv) you can find one month’s p
 All files are located in the src/main/resources/data/ directory. Initially the cryptos are only six, but when new files with prices are added to the resources/data/ directory, 
 they will be included.
 ***
-Detailed API documentation implemented using swagger, it can be found at http://localhost:8080/swagger-ui.html.
+Detailed API documentation implemented using **Swagger**, it can be found at http://localhost:8080/swagger-ui.html.
 This version of the application has six endpoints.
 * **GET /price/{symbol}/oldest** - Returns the oldest values for the requested crypto in a month. The name of the crypto is passed through the {symbol} parameter, 
  for example http://localhost:8080/price/BTC/oldest. 
