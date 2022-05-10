@@ -111,12 +111,11 @@ public class PriceService {
                 .collect(Collectors.toSet());
     }
 
-    //todo Читает при каждом обращении, сделать какой-то кеш
+    //todo
     private List<CryptoAsset> readCryptoBySymbol(String symbol) {
 
         String path = mapSymbolPath.get(symbol);
         if(path == null) {
-            //todo : to fix CryptoNotFoundException
             throw new CryptoNotFoundException("The crypto token you entered (" + symbol + ") is not supported by our recommendation service");
         }
 
